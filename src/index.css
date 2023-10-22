@@ -7,6 +7,81 @@
   outline: none;
 }
 
+:root {
+  --primary: #41E1BA;
+  --working: #EF5D50;
+  --text: #000000;
+  --text-working: #ffffff;
+  --background: #ffffff;
+}
+
 body {
   font-family: sans-serif;
+  background-color: var(--primary);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  transition: background-color 300ms ease;
+}
+
+.pomodoro {
+  background-color: var(--background);
+  width: 100vw;
+  max-width: 540px;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+}
+
+.pomodoro h2 {
+  font-size: 20px;
+}
+
+.pomodoro .timer {
+  font-size: 6em;
+}
+
+.pomodoro .controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pomodoro .controls .button {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 300ms ease,
+              color 300ms ease;
+  text-transform: capitalize;
+}
+
+.working {
+  background-color: var(--working);
+}
+
+.working .pomodoro .button {
+  background-color: var(--working);
+  color: var(--text-working);
+}
+
+.data {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.data p {
+  font-size: 16px;
+}
+
+.data p::first-letter {
+  text-transform: uppercase;
 }

@@ -1,8 +1,16 @@
+import { PomodoroTimer } from './components/timer';
+
+
 function App() {
+
   return (
     <>
-    <h1>Pomodoro App</h1>
-    {/* estudar Redux */}
+      <PomodoroTimer 
+        defaultPomodoroTimer={1500}
+        shortRestTime={300}
+        longRestTime={600}
+        cycles={4}
+      />
     </>
   )
 }
